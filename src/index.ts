@@ -1,10 +1,10 @@
 import { Client } from "discord.js";
-import { config } from "./config";
 import { commands } from "./commands";
+import { config } from "./config";
 import { deployCommands } from "./deploy-commands";
 
 export const client = new Client({
-  intents: ["Guilds", "GuildMessages", "DirectMessages"],
+  intents: ["Guilds", "GuildMessages", "DirectMessages", "GuildMembers"],
 });
 
 client.once("ready", () => {
